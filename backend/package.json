@@ -4,7 +4,7 @@
   "description": "myNoteBook- its your nots on cloud",
   "main": "index.js",
   "scripts": {
-    "serve": "nodemon index.js"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",

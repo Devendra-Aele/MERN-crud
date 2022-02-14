@@ -1,17 +1,22 @@
-const mongoose=require("mongoose")
+const mongoose=require('mongoose')
 const {Schema}=mongoose
 const NotesSchema=new Schema({
-    name:{
+    user:{
+      type:mongoose.Schema.Types.ObjectId,
+      ref:"AUTH"
+    },
+    title:{
         type:String,
         required:true
     },
-    email:{
+    discription:{
         type:String,
-        required:true
+        required:true,
+        unique:false
     },
-    paswword:{
+    tag:{
         type:String,
         required:true
     }
 })
-module.exports=mongoose.model("notes",NotesSchema)
+module.exports=mongoose.model("NOTES",NotesSchema)

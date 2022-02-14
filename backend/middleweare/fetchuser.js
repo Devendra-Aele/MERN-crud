@@ -9,6 +9,7 @@ const middlefechdata=(req,res,next)=>{
         req.user=data.user
         next()
     } catch (error) {
+        console.log(error)
         return res.status(401).send({error:"token is not matched in data "})
     }
   
