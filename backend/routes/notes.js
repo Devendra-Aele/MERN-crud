@@ -22,17 +22,17 @@ router.get('/fetchalldata',middlefetchdata,async(req,res,next)=>{
 // ====================================================================
 router.post('/add_note',middlefetchdata,[
       body("title").isLength({ min: 3 }),
-      body("discription",'please add sore than 50 char').isLength({ min: 5 }),
+      body("description",'please add sore than 50 char').isLength({ min: 5 }),
       body("tag").isLength({ min: 5 }),
 ],async(req,res)=>{
       try {
           const errors=validationResult(req)
-          const {title,discription,tag}=req.body;
+          const {title,description,tag}=req.body;
           if (!errors.isEmpty()) {
                 return res.status(400).json({ errors: errors.array() });
               }
           const note=new Note({
-                title,discription,tag,user:req.user.id
+                title,description,tag,user:req.user.id
           })
           const NoteData=await note.save();
           res.json(NoteData)
@@ -50,14 +50,14 @@ router.put('/update/:id',middlefetchdata,
  
       async(req,res)=>{
       try {
-            const {title,discription,tag}=req.body;
+            const {title,description,tag}=req.body;
             const newNote={};
             if(title){newNote.title=title}
-            if(discription){newNote.discription=discription}
+            if(description){newNote.description=description}
             if(tag){newNote.tag=tag}
             
             let note = await Note.findById(req.params.id)
-            if(!note){return res.stsus(404).send('Note Found')}
+            if(!note){return res.status(404).send('Note Found')}
             
             if(note.user.toString()!=req.user.id){
                   res.status(401).send('Note Found')
@@ -76,9 +76,9 @@ router.put('/update/:id',middlefetchdata,
 router.delete('/delete/:id',middlefetchdata,
       async(req,res)=>{
       try {
-            const {title,discription,tag}=req.body;
+            const {title,description,tag}=req.body;
             let note = await Note.findById(req.params.id)
-            if(!note){return res.stsus(404).send('Note Found')}
+            if(!note){return res.status(404).send('Note Found')}
             
             if(note.user.toString()!=req.user.id){
                   res.status(401).send('Note Found')

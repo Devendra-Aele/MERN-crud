@@ -18,13 +18,15 @@ router.post(
   ],
   async (req, res) => {
     const errors = validationResult(req);
+    let Success=false;
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
+       Success=false;
+      return res.status(400).json({Success, errors: errors.array() });
     }
     try {
       let user = await User.findOne({ email: req.body.email });
       if (user) {
-        return res.status(400).json({ errors: "this email is olready exiest" });
+        return res.status(400).json({Success, errors: "this email is olready exiest" });
       }
       const salt = await bcrypt.genSalt(10);
       secretepass = await bcrypt.hash(req.body.password, salt);
@@ -40,7 +42,8 @@ router.post(
         },
       };
       const token = jwt.sign(data, "HelloDevendra");
-      res.json(user);
+      Success=true;
+      res.json({Success,token});
     } catch (error) {
       return res.status(500).send("some error occoured");
     }
@@ -55,8 +58,9 @@ router.post(
   [body("email").isEmail(), body("password").isLength({ min: 5 })],
   async (req, res) => {
     const errors = validationResult(req);
+    let Success=false;
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
+      return res.status(400).json({ Success,errors: errors.array() });
     }
 
     const { email, password } = req.body;
@@ -65,13 +69,13 @@ router.post(
     if (!user) {
       return res
         .status(400)
-        .json({ errors: "Sorry This Email Does Not Exesiste" });
+        .json({ Success,errors: "Sorry This Email Does Not Exesiste" });
     }
     let bcryptPass = await bcrypt.compare(password, user.password);
     if (!bcryptPass) {
       return res
         .status(400)
-        .json({ errors: "somthing is wrong in this password" });
+        .json({Success, errors: "somthing is wrong in this password" });
     }
     const data = {
       user: {
@@ -79,7 +83,8 @@ router.post(
       },
     };
     const token = jwt.sign(data, "HelloDevendra");
-    res.json({ token });
+    Success=true;
+    res.json({Success, token });
   }
 );
 

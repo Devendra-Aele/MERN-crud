@@ -24,8 +24,11 @@ const connectTomongo=require('./db')
 const express =require('express')
 const port =5000;
 const app=express()
+var cors = require('cors')
 connectTomongo()
 app.use(express.json())
+
+app.use(cors())
 app.get('/',(req,res)=>{
   console.log("Hello I Am /")
   res.send("Hello I Am /")

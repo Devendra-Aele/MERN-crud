@@ -9,10 +9,10 @@ const NotesSchema=new Schema({
         type:String,
         required:true
     },
-    discription:{
+    description:{
         type:String,
         required:true,
-        unique:false
+
     },
     tag:{
         type:String,
