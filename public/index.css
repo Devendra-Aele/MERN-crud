@@ -20,6 +20,14 @@ span{
 .navbar{
   box-shadow: 2px 1px 10px black;
 }
+
+
+.form-control{
+  font-weight: 600;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  background: transparent;
+}
 /* ========================================= */
 /* ===============About Page Css=============*/
 /* ========================================= */
