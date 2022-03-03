@@ -1,59 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Roboto:wght@100&display=swap");
 
-
-
-
-i{
+i {
   cursor: pointer;
 }
-label{
-  font-size: 20px ;
+label {
+  font-size: 20px;
   font-weight: 400;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
-span{
+span {
   color: red;
 }
-.container{
+.container {
   margin: auto;
 }
-.navbar{
+.navbar {
   box-shadow: 2px 1px 10px black;
 }
 
-
-.form-control{
+.form-control {
   font-weight: 600;
   font-size: 30px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   background: transparent;
 }
 /* ========================================= */
 /* ===============About Page Css=============*/
 /* ========================================= */
-.about{
-display: flex;
-flex-direction: column;
-text-align: center;
-padding: 30px;
-margin-top: 80px;
+.about {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+  margin-top: 80px;
   color: white;
   width: 100%;
   box-shadow: 15px 15px 5px 5px rgb(58, 53, 53);
   background-color: black;
 }
-.about h2{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  
+.about h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.about p{
-  font-family: 'Courier New', Courier, monospace;
+.about p {
+  font-family: "Courier New", Courier, monospace;
 }
 /* ========================================= */
 /* ===============Add Notes Css=============*/
 /* ========================================= */
 .NotesForm {
-  width: 40%;
+  width: 40% !important;
   padding: 5px 10px;
   margin: auto;
   background-image: linear-gradient(rgb(248, 245, 245), rgb(190, 190, 179));
@@ -64,14 +59,14 @@ margin-top: 80px;
   box-shadow: 3px 3px 10px -3px black;
 }
 .NotesForm h2 {
- font-family: "Akaya Telivigala", cursive;
- width: 60%;
- margin: auto;
- border-radius: 30px;
- padding-bottom: 3px;
- border-bottom: 4px solid rgb(8, 8, 8);
- margin-bottom: 15px;
-text-align: center;
+  font-family: "Akaya Telivigala", cursive;
+  width: 60%;
+  margin: auto;
+  border-radius: 30px;
+  padding-bottom: 3px;
+  border-bottom: 4px solid rgb(8, 8, 8);
+  margin-bottom: 15px;
+  text-align: center;
 }
 .NotesForm form {
   width: 70%;
@@ -88,20 +83,20 @@ text-align: center;
 /* ========================================= */
 /* ===============Login CSS================= */
 /* ========================================= */
-.container .Login{
+.container .Login {
   padding: 20px 20px;
-  width:600px;
+  width: 600px;
   margin: auto;
   margin-top: 30px;
   margin-top: 50px;
   box-shadow: 3px 3px 10px -3px black;
 }
-.Login h3{
+.Login h3 {
   padding: 0px 20px;
   text-align: center;
 }
-.login_form form{
-padding: 10px 30px;
+.login_form form {
+  padding: 10px 30px;
 }
 .Login input {
   background: none;
@@ -110,9 +105,9 @@ padding: 10px 30px;
   border-bottom: 2px solid rgb(10, 10, 10);
 }
 .login_img {
-padding: auto;
+  padding: auto;
 }
-.login_img img{
+.login_img img {
   padding: 20px;
   /* justify-content: center; */
   /* text-align: center; */
@@ -124,21 +119,19 @@ padding: auto;
 /* ========================================= */
 /* ===============Signin CSS================ */
 /* ========================================= */
-.container .Signin{
+.container .Signin {
   padding: 25px;
- 
 }
-.container .Signin h3{
+.container .Signin h3 {
   width: 100%;
   margin: auto;
   border-radius: 30px;
   padding-bottom: 5px;
   border-bottom: 4px solid rgb(8, 8, 8);
   margin-bottom: 15px;
- text-align: center;
+  text-align: center;
 }
-.container .Signin form{
-  
+.container .Signin form {
   padding: 20px 50px;
   width: 40%;
   margin: auto;
@@ -154,58 +147,261 @@ padding: auto;
 /* ========================================= */
 /* ===============Note_Card CSS============= */
 /* ========================================= */
-.YourNotes h2{
+.YourNotes h2 {
   font-family: "Akaya Telivigala", cursive;
   display: block;
   border-radius: 30px;
   padding: 3px 200px;
   border-bottom: 4px solid rgb(8, 8, 8);
   margin-bottom: 15px;
- text-align: center;
+  text-align: center;
 }
 
-.Note_card{
-height: 200px;
+.Note_card {
+  height: 200px;
 }
-.card{
+.card {
   height: 100%;
   box-shadow: 3px 3px 10px -3px black;
   text-align: center;
 }
-.card .title{
+.card .title {
   font-size: 20px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 600;
 }
-.card .description{
-
+.card .description {
   font-size: 16px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   margin-bottom: 2px;
 }
-.card .tag{
+.card .tag {
   font-size: 14px;
-  display:inline-block;
+  display: inline-block;
   width: 150px;
-    font-weight: 600;
+  font-weight: 600;
 }
-.card .I_btn{
+.card .I_btn {
   font-size: 25px;
   position: absolute;
   bottom: 10px;
   border-top: 1px solid black;
   padding-top: 9px;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   width: 90%;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 600;
 }
-.card .I_btn .fa-trash{
-    color: rgb(221, 15, 15);
-    /* float: right; */
+.card .I_btn .fa-trash {
+  color: rgb(221, 15, 15);
+  /* float: right; */
 }
-.card .I_btn .fa-pen-to-square{
-color: blue;
+.card .I_btn .fa-pen-to-square {
+  color: blue;
+}
+/* ======================================================================================================================*/
+/* =============midea==================================================================================================== */
+/* ====================================================================================================================== */
+@media only screen and (max-width: 786px) {
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar-nav li {
+    margin: auto;
+    text-align: center;
+  }
+}
+
+/* ==================================================== */
+/* =============== media 786 Signin CSS================ */
+/* ==================================================== */
+.container .Signin form {
+  padding: 20px 50px;
+  width: 60%;
+  margin: auto;
+  box-shadow: 3px 3px 10px -3px black;
+}
+/* =================================================== */
+/* ===============media 786 Login CSS================= */
+/* =================================================== */
+
+.login_form form {
+  padding: 0px 0px;
+}
+/* =================================================== */
+/* ===============media 786 Add Notes Css=============*/
+/* =================================================== */
+.NotesForm {
+  width: 70%;
+}
+/* ========================================= */
+/* ===============Note_Card CSS============= */
+/* ========================================= */
+.YourNotes h2 {
+  font-family: "Akaya Telivigala", cursive;
+  display: block;
+  border-radius: 30px;
+  padding: 3px 200px;
+  border-bottom: 4px solid rgb(8, 8, 8);
+  margin-bottom: 15px;
+  /* margin-top: 5px; */
+  text-align: center;
+}
+
+.Note_card {
+  height: 200px;
+}
+.card {
+  height: 100%;
+  box-shadow: 3px 3px 10px -3px black;
+  text-align: center;
+}
+.card .title {
+  font-size: 16px !important;
+  margin-top: 20px !important;
+}
+.card .tag {
+  font-size: 14px;
+  display: inline-block;
+  width: 150px;
+  font-weight: 600;
+}
+.card .I_btn {
+  font-size: 20px;
+}
+/* ========================================= */
+/* ===============About Page Css=============*/
+/* ========================================= */
+.about {
+  margin-top: 50px;
+  padding: 20px;
+  box-shadow: 10px 10px 5px 5px rgb(58, 53, 53);
+}
+/* ======================================================================================================================*/
+/* =============midea 425=========================================================================================== */
+/* ====================================================================================================================== */
+@media only screen and (max-width: 425px) {
+  /* ========================================= */
+  /* ===============About Page Css=============*/
+  /* ========================================= */
+  .about {
+    margin-top: 30px;
+    box-shadow: 5px 5px 5px 0px rgb(58, 53, 53);
+  }
+  .about p {
+    padding: 0px !important;
+    font-family: "Courier New", Courier, monospace;
+  }
+  /* ========================================= */
+  /* ===============Add Notes Css=============*/
+  /* ========================================= */
+  .NotesForm {
+    width: 90% !important;
+  }
+  /* ========================================= */
+  /* ===============Login CSS================= */
+  /* ========================================= */
+  .container .Login {
+    padding: 10px 10px;
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow: 3px 3px 10px -3px black;
+  }
+  .login_form form {
+    padding: 10px 40px;
+  }
+  /* ========================================= */
+  /* ===============Signin CSS================ */
+  /* ========================================= */
+
+  .container .Signin form {
+    padding: 20px 50px;
+    width: 100%;
+    margin: auto;
+    box-shadow: 3px 3px 10px -3px black;
+  }
+  /* ========================================= */
+  /* ===============Note_Card CSS============= */
+  /* ========================================= */
+  .YourNotes  {
+    padding: 3px 50px;
+  }
+  .YourNotes h2 {
+    padding: 3px 0px;
+  }
+
+}
+/* ======================================================================================================================*/
+/* =============midea 320=========================================================================================== */
+/* ====================================================================================================================== */
+@media only screen and (max-width: 320px) {
+  /* ========================================= */
+  /* ===============About Page Css=============*/
+  /* ========================================= */
+  .about {
+    margin-top: 30px;
+    box-shadow: 5px 5px 5px 0px rgb(58, 53, 53);
+  }
+  .about p {
+    padding: 0px !important;
+    font-family: "Courier New", Courier, monospace;
+  }
+  /* ========================================= */
+  /* ===============Add Notes Css=============*/
+  /* ========================================= */
+  .NotesForm {
+    width: 100% !important;
+    padding: 5px 0px;
+    margin: auto;
+  }
+  .NotesForm form {
+    width: 80%;
+    margin: auto;
+  }
+
+/* ========================================= */
+/* ===============Login CSS================= */
+/* ========================================= */
+.container .Login {
+  padding: 20px 0px;
+  width: 100%;
+}
+.Login h3 {
+  padding: 0px 20px;
+  text-align: center;
+}
+.login_form form {
+  padding: 10px 20px;
+}
+/* ========================================= */
+/* ===============Signin CSS================ */
+/* ========================================= */
+.container .Signin {
+  padding:25px 5px;
+}
+
+.container .Signin form {
+  padding: 20px 15px;
+  width: 100%;
+  margin: auto;
+  box-shadow: 3px 3px 10px -3px black;
+}
+
+/* ========================================= */
+/* ===============Note_Card CSS============= */
+/* ========================================= */
+
+.YourNotes  {
+padding: 15px;
+}
+
+.card .I_btn {
+  font-size: 20px;
+
+}
 }
